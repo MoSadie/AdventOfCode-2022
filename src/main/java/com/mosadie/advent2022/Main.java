@@ -3,6 +3,7 @@ package com.mosadie.advent2022;
 import com.mosadie.advent2022.day1.Day1;
 import com.mosadie.advent2022.day2.Day2;
 import com.mosadie.advent2022.day3.Day3;
+import com.mosadie.advent2022.day4.Day4;
 
 public class Main {
 
@@ -31,6 +32,11 @@ public class Main {
                     d3.execute1(args);
                     System.out.println();
                     d3.execute2(args);
+                    return;
+
+                case 4:
+                    Day4 d4 = new Day4();
+                    d4.execute(args);
                     return;
 
                 default:

@@ -15,7 +15,7 @@ public class Day3 {
     
     public void execute1(String[] args) {
         if (args.length != 2) {
-            System.out.println("Incorrect number of args: must be day 2 and the input file path.");
+            System.out.println("Incorrect number of args: must be day 3 and the input file path.");
             return;
         }
 
@@ -55,7 +55,7 @@ public class Day3 {
 
     public void execute2(String[] args) {
         if (args.length != 2) {
-            System.out.println("Incorrect number of args: must be day 2 and the input file path.");
+            System.out.println("Incorrect number of args: must be day 3 and the input file path.");
             return;
         }
 
