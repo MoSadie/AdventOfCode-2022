@@ -4,6 +4,7 @@ import com.mosadie.advent2022.day1.Day1;
 import com.mosadie.advent2022.day2.Day2;
 import com.mosadie.advent2022.day3.Day3;
 import com.mosadie.advent2022.day4.Day4;
+import com.mosadie.advent2022.day5.Day5;
 
 public class Main {
 
@@ -37,6 +38,11 @@ public class Main {
                 case 4:
                     Day4 d4 = new Day4();
                     d4.execute(args);
+                    return;
+
+                case 5:
+                    Day5 d5 = new Day5();
+                    d5.execute(args);
                     return;
 
                 default:

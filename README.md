@@ -15,3 +15,4 @@ You can run the code using Gradle's `run` task. Pass the arguments (using `--arg
 |   2 | `2 <path to input file>` |
 |   3 | `3 <path to input file>` |
 |   4 | `4 <path to input file>` |
+|   5 | `5 <path to input file>` |
