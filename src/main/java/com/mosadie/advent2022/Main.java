@@ -22,31 +22,24 @@ public class Main {
 
             switch (dayNumber) {
                 case 1:
-                    Day1 d1 = new Day1();
-                    d1.execute(args);
-                    return;
+                    day = new Day1();
+                    break;
 
                 case 2:
-                    Day2 d2 = new Day2();
-                    d2.execute(args);
-                    return;
+                    day = new Day2();
+                    break;
 
                 case 3:
-                    Day3 d3 = new Day3();
-                    d3.execute1(args);
-                    System.out.println();
-                    d3.execute2(args);
-                    return;
+                    day = new Day3();
+                    break;
 
                 case 4:
-                    Day4 d4 = new Day4();
-                    d4.execute(args);
-                    return;
+                    day = new Day4();
+                    break;
 
                 case 5:
-                    Day5 d5 = new Day5();
-                    d5.execute(args);
-                    return;
+                    day = new Day5();
+                    break;
 
                 case 6:
                     day = new Day6();
@@ -65,9 +58,10 @@ public class Main {
             System.out.println();
             String answer2 = day.execute2(args);
             System.out.println();
+            System.out.println("--------------------------------------------------");
             System.out.println("Answer 1: " + answer1);
-            System.out.println();
             System.out.println("Answer 2: " + answer2);
+            System.out.println("--------------------------------------------------");
         } catch (NumberFormatException e) {
             System.out.println("Failed to parse argument: Must be an integer between 1 and 31");
             return;
