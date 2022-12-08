@@ -1,22 +1,23 @@
 package com.mosadie.advent2022.day3;
 
+import com.mosadie.advent2022.Day;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.util.*;
 
-public class Day3 {
+public class Day3 extends Day {
     private List<Rucksack> rucksacks;
     
     public Day3() {
-        
+        super(3);
     }
     
-    public void execute1(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Incorrect number of args: must be day 3 and the input file path.");
-            return;
+    public String execute1(String[] args) {
+        if (!checkArgs(args)) {
+            return null;
         }
 
         try {
@@ -24,7 +25,7 @@ public class Day3 {
 
             if (!Files.exists(filePath)) {
                 System.out.println("File does not exist!");
-                return;
+                return null;
             }
 
             rucksacks = new LinkedList<>();
@@ -43,20 +44,20 @@ public class Day3 {
             }
 
             System.out.println("Total Dupe Sum: " + sum);
+            return String.valueOf(sum);
 
         } catch (InvalidPathException e) {
             System.out.println("Failed to parse path!");
-            return;
+            return null;
         } catch (IOException e) {
             System.out.println("Failed to open file! " + e.getMessage());
-            return;
+            return null;
         }
     }
 
-    public void execute2(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Incorrect number of args: must be day 3 and the input file path.");
-            return;
+    public String execute2(String[] args) {
+        if (!checkArgs(args)) {
+            return null;
         }
 
         try {
@@ -64,7 +65,7 @@ public class Day3 {
 
             if (!Files.exists(filePath)) {
                 System.out.println("File does not exist!");
-                return;
+                return null;
             }
 
             rucksacks = new LinkedList<>();
@@ -86,13 +87,14 @@ public class Day3 {
             }
 
             System.out.println("Total Sum: " + sum);
+            return String.valueOf(sum);
 
         } catch (InvalidPathException e) {
             System.out.println("Failed to parse path!");
-            return;
+            return null;
         } catch (IOException e) {
             System.out.println("Failed to open file! " + e.getMessage());
-            return;
+            return null;
         }
     }
 

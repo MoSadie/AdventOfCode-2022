@@ -5,6 +5,8 @@ import com.mosadie.advent2022.day2.Day2;
 import com.mosadie.advent2022.day3.Day3;
 import com.mosadie.advent2022.day4.Day4;
 import com.mosadie.advent2022.day5.Day5;
+import com.mosadie.advent2022.day6.Day6;
+import com.mosadie.advent2022.day7.Day7;
 
 public class Main {
 
@@ -15,9 +17,10 @@ public class Main {
         }
 
         try {
-            int day = Integer.parseInt(args[0]);
+            int dayNumber = Integer.parseInt(args[0]);
+            Day day;
 
-            switch (day) {
+            switch (dayNumber) {
                 case 1:
                     Day1 d1 = new Day1();
                     d1.execute(args);
@@ -45,10 +48,26 @@ public class Main {
                     d5.execute(args);
                     return;
 
+                case 6:
+                    day = new Day6();
+                    break;
+
+                case 7:
+                    day = new Day7();
+                    break;
+
                 default:
                     System.out.println("Unknown day: Try again.");
                     return;
             }
+
+            String answer1 = day.execute1(args);
+            System.out.println();
+            String answer2 = day.execute2(args);
+            System.out.println();
+            System.out.println("Answer 1: " + answer1);
+            System.out.println();
+            System.out.println("Answer 2: " + answer2);
         } catch (NumberFormatException e) {
             System.out.println("Failed to parse argument: Must be an integer between 1 and 31");
             return;
